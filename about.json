@@ -1,0 +1,32 @@
+{
+  "name": "NateDhaliwal's theme",
+  "component": false,
+  "license_url": null,
+  "about_url": null,
+  "authors": null,
+  "theme_version": null,
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {
+    "Kode_Mono": "assets/Kode_Mono.ttf"
+  },
+  "color_schemes": {
+    "NateDhaliwal (Dark)": {
+      "primary": "ffffff",
+      "secondary": "333333",
+      "tertiary": "0073ff",
+      "quaternary": "e45735",
+      "header_background": "1f1f1f",
+      "header_primary": "cfcfcf",
+      "highlight": "333333",
+      "selected": "ffffff",
+      "hover": "303030",
+      "danger": "ff0000",
+      "success": "149900",
+      "love": "fe1048"
+    }
+  },
+  "modifiers": {
+  },
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}
