@@ -1,0 +1,36 @@
+body {
+    background-color: --secondary;
+    font-family: "Kode Mono", monospace;
+    color: --primary;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, dt {
+    color: --primary;
+}
+
+a {
+    color: --tertiary;
+}
+
+a:link {
+    color: --tertiary;
+}
+
+a:visited {
+    color: --tertiary;
+}
+
+a:hover {
+    color: --tertiary;
+}
+
+button {
+    color: --primary;
+    background-color: --secondary;
+    font-family: "Kode Mono", monospace;
+    border-style: 3px solid blue;
+}
+
+header.d-header {
+    background-color: #1f1f1f;
+}
