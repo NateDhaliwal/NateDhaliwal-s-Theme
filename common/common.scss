@@ -35,19 +35,18 @@ header.d-header {
     background-color: #1f1f1f;
 }
 
-span.first.username.staff::after {
+span.first.username.staff::before {
     content: 'Staff';
     background-color: var(--tertiary-very-low);
     border-radius: 5px;
     padding: 2px;
-    margin-left: 5px;
+    margin-right: 5px;
     display: inline-block; /* Ensures the background color wraps around the text */
 }
 
-span.first.username.staff::after {
+span.first.username::after {
     content: ':';
     color: var(--primary);
-    margin-left: 5px; /* Adds space between the "Staff" label and the colon */
 }
 
 div.topic-avatar, span.second.full-name {
