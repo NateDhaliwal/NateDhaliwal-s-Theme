@@ -41,11 +41,13 @@ span.first.username.staff::after {
     border-radius: 5px;
     padding: 2px;
     margin-left: 5px;
+    display: inline-block; /* Ensures the background color wraps around the text */
 }
 
-span.first.username::after + span {
+span.first.username.staff::after {
     content: ':';
-    color: --primary;
+    color: var(--primary);
+    margin-left: 5px; /* Adds space between the "Staff" label and the colon */
 }
 
 div.topic-avatar, span.second.full-name {
