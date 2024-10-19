@@ -35,10 +35,6 @@ header.d-header {
     background-color: #1f1f1f;
 }
 
-span.first.username {
-    color: --primary;
-}
-
 span.first.username::after {
     content: ':';
     color: --primary;
@@ -46,7 +42,7 @@ span.first.username::after {
 
 span.first.username.staff::before {
     content: 'Staff';
-    background-color: --tertiary-very-low;
+    background-color: --tertiary-very-low!important;
     border-radius: 5px;
     padding: 2px;
     padding-right: 5px;
