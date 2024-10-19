@@ -35,6 +35,6 @@ header.d-header {
     background-color: #1f1f1f;
 }
 
-div.names.trigger-user-card {
-    
+div.first.username, div.second.full-name {
+    display: none;
 }
