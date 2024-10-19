@@ -35,8 +35,8 @@ header.d-header {
     background-color: #1f1f1f;
 }
 
-span.first.username.staff::before {
-    content: 'Staff';
+span.first.username.staff.admin::before {
+    content: 'Admin';
     background-color: var(--tertiary-very-low);
     border-radius: 5px;
     padding: 2px;
