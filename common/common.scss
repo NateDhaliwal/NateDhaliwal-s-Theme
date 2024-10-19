@@ -45,9 +45,8 @@ span.first.username::after {
 }
 
 span.first.username.staff::before {
-    content: 'Staff';
-    color: --primary;
-    background-color: --tertiary;
+    content: 'Staff ';
+    color: --tertiary;
 }
 
 div.topic-avatar, span.second.full-name {
