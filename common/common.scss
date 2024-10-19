@@ -43,7 +43,7 @@ span.first.username.staff::after {
     margin-left: 5px;
 }
 
-span.first.username::after::after {
+span.first.username::after + span {
     content: ':';
     color: --primary;
 }
