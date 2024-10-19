@@ -45,11 +45,12 @@ span.first.username::after {
 }
 
 span.first.username.staff::before {
-    content: 'Staff  ';
+    content: 'Staff';
     //color: --tertiary-very-low;
     background-color: red;
     border-radius: 5px;
     padding: 2px;
+    padding-right: 5px;
 }
 
 div.topic-avatar, span.second.full-name {
