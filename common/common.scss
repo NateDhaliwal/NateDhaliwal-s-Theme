@@ -42,7 +42,7 @@ span.first.username::after {
 
 span.first.username.staff::before {
     content: 'Staff';
-    background-color: --tertiary-very-low!important;
+    background-color: var(--tertiary);
     border-radius: 5px;
     padding: 2px;
     padding-right: 5px;
