@@ -35,17 +35,17 @@ header.d-header {
     background-color: #1f1f1f;
 }
 
-span.first.username::after {
-    content: ':';
-    color: --primary;
-}
-
-span.first.username.staff::before {
+span.first.username.staff::after {
     content: 'Staff';
     background-color: var(--tertiary-very-low);
     border-radius: 5px;
     padding: 2px;
     margin-right: 5px;
+}
+
+span.first.username::after::after {
+    content: ':';
+    color: --primary;
 }
 
 div.topic-avatar, span.second.full-name {
