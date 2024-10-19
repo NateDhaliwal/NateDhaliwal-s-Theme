@@ -36,5 +36,9 @@ header.d-header {
 }
 
 span.first.username, span.second.full-name {
+    color: --primary;
+}
+
+div.topic-avatar {
     display: none;
 }
