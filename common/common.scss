@@ -39,6 +39,10 @@ span.first.username, span.second.full-name {
     color: --primary;
 }
 
+span.first.username::after, span.second.full-name::after {
+    content: ':';
+}
+
 div.topic-avatar {
     display: none;
 }
