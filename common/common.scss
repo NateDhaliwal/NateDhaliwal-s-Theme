@@ -50,5 +50,12 @@ span.first.username::after {
 }
 
 div.topic-avatar, span.second.full-name {
+    opacity: 99;
+}
+
+td.posters.topic-list-data {
     display: none;
+}
+td.num.posts-map.posts.topic-list-data::after{
+    content: 'posts';
 }
