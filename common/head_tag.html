@@ -2,7 +2,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         var elements = document.querySelectorAll('tr.topic-list-item');
         elements.forEach(function(el) {
-        var wrapper = document.createElement('div.topic-list-item-nd');
+        var wrapper = document.createElement('div class="topic-list-item-nd"');
         el.parentNode.insertBefore(wrapper, el);
         wrapper.appendChild(el);
    });
