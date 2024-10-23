@@ -1,4 +1,4 @@
-<!--
+
 <script type="text/discourse-plugin" version="1.14.0">
   var script = document.createElement('script');
   script.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js";
@@ -6,14 +6,14 @@
   const showLinks = settings.show_tsParticles_links_animation;
   if (showLinks) {
     document.addEventListener("DOMContentLoaded", function() {
-      var elements = document.querySelectorAll('html');
+      var elements = document.querySelectorAll('section#main');
       elements.forEach(function(el) {
         var wrapper = document.createElement('div');
         wrapper.className = 'wrapper';
         el.parentNode.insertBefore(wrapper, el);
         wrapper.appendChild(el);
       });
-      var elements = document.querySelectorAll('body');
+      var elements = document.querySelectorAll('div#main-outlet-wrapper');
       elements.forEach(function(el) {
         var wrapper = document.createElement('div');
         wrapper.className = 'content';
@@ -33,4 +33,4 @@
     });
   }
 </script>
--->
+
