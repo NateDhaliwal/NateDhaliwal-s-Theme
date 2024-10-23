@@ -1,0 +1,10 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var elements = document.querySelectorAll('td.topic-list-data');
+        elements.forEach(function(el) {
+        var wrapper = document.createElement('div.topic-list-data-nd');
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+   });
+});
+</script>
