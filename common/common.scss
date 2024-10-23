@@ -59,9 +59,18 @@ td.posters.topic-list-data {
 td.num.posts-map.posts.topic-list-data::after{
     content: 'posts';
 }
-
+/*
 TopicItem {
     max-width: 100%;
     border: 3px solid blue;
     border-radius: 5px;
+}
+*/
+
+th.num.sortable.topic-list-data {
+    display: none;
+}
+
+td.num.topic-list-data.age.activity::before {
+    content: 'Last post: '
 }
