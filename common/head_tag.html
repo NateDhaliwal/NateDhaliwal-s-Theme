@@ -1,6 +1,6 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var elements = document.querySelectorAll('tr.topic-list-item');
+        var elements = document.querySelectorAll('tr.topic-list-item.ember-view');
         elements.forEach(function(el) {
         var wrapper = document.createElement('TopicItem');
         el.parentNode.insertBefore(wrapper, el);
