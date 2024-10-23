@@ -1,0 +1,3 @@
+show_tsParticles_links_animation:
+  type: boolean
+  defaultValue: false
