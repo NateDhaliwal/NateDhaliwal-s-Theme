@@ -1,4 +1,3 @@
 show_tsParticles_links_animation:
-  #default: false
-  type: bool
-  description: "Setting to enable/disable tsParticles' links animation."
+    default: false
+    client: true
