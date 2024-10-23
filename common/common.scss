@@ -78,3 +78,20 @@ td.num.topic-list-data.age.activity::before {
 td.num.topic-list-data.views::after {
     content: ' views'
 }
+
+
+div.wrapper {
+    position: relative;
+}
+
+div.content {
+    background-color: transparent;
+    color: snow;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    top: 40%;
+    width: 100%;
+    z-index: 100;
+}
