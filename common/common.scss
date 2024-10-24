@@ -95,3 +95,9 @@ div.content {
     width: 100%;
     z-index: 100;
 }
+
+@if $show_tsParticles_links_animation {
+    div.sidebar-wrapper {
+        background-color: transparent;
+    }
+}
