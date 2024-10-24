@@ -3,13 +3,20 @@
   const showLinks = settings.show_tsParticles_links_animation;
   const showParallax = settings.show_tsParticles_parallax_animation;
   if (showParallax) {
-    const script = document.createElement('script');
-    script.addEventListener("load", () => {
+    const script_one = document.createElement('script');
+    script_one.addEventListener("load", () => {
           console.log("called", tsParticles);
           initTsParticles();
     })
-    script.src = "https://cdn.jsdelivr.net/npm/@tsparticles/move-parallax@3.5.0/tsparticles.move.parallax.min.js";
-    document.head.appendChild(script);
+    script_one.src = "https://cdn.jsdelivr.net/npm/@tsparticles/move-parallax@3.5.0/tsparticles.move.parallax.min.js";
+    document.head.appendChild(script_one);
+  const script_two = document.createElement('script');
+    script_two.addEventListener("load", () => {
+          console.log("called", tsParticles);
+          initTsParticles();
+      })
+    script_two.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js";
+    document.head.appendChild(script_two);
     
     function initTsParticles() {
       (async () => {
@@ -42,13 +49,20 @@
   }
   
   if (showLinks) {
-    const script = document.createElement('script');
-    script.addEventListener("load", () => {
+    const script_one = document.createElement('script');
+    script_one.addEventListener("load", () => {
+          console.log("called", tsParticles);
+          initTsParticles();
+    })
+    script_one.src = "https://cdn.jsdelivr.net/npm/@tsparticles/move-parallax@3.5.0/tsparticles.move.parallax.min.js";
+    document.head.appendChild(script_one);
+  const script_two = document.createElement('script');
+    script_two.addEventListener("load", () => {
           console.log("called", tsParticles);
           initTsParticles();
       })
-    script.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js";
-    document.head.appendChild(script);
+    script_two.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js";
+    document.head.appendChild(script_two);
     
     function initTsParticles() {
       (async () => {
