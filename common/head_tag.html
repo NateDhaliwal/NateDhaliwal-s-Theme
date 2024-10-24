@@ -1,26 +1,26 @@
 
 <script type="text/discourse-plugin" version="1.14.0">
-  const script = document.createElement('script');
-  script.addEventListener("load", () => {
-        console.log("called", tsParticles);
-        initTsParticles();
-    })
-  script.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js";
-  document.head.appendChild(script);
-  
-  function initTsParticles() {
-    (async () => {
-      await tsParticles.load({
-        id: "tsparticles",
-        options: { preset: "links" },
-        background: {
-          "color": {"value":"#0d47a1"}
-        }
-      });
-    })();
-  }
   const showLinks = settings.show_tsParticles_links_animation;
   if (showLinks) {
+    const script = document.createElement('script');
+    script.addEventListener("load", () => {
+          console.log("called", tsParticles);
+          initTsParticles();
+      })
+    script.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js";
+    document.head.appendChild(script);
+    
+    function initTsParticles() {
+      (async () => {
+        await tsParticles.load({
+          id: "tsparticles",
+          options: { preset: "links" },
+          background: {
+            "color": {"value":"#0d47a1"}
+          }
+        });
+      })();
+    }
     document.addEventListener("DOMContentLoaded", function() {
       var elements = document.querySelectorAll('section#main');
       elements.forEach(function(el) {
