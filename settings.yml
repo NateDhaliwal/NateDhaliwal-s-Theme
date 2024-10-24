@@ -7,3 +7,7 @@ show_tsParticles_links_animation:
   #default: false
   #type: bool
   #description: "Setting to enable/disable tsParticles' links animation."
+display_new_topic_badge:
+  default: true
+  type: bool
+  description: "Show 'New!' badge next to new topics."
