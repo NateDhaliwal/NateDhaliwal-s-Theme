@@ -102,3 +102,22 @@ div.content {
         position: sticky;
     }
 }
+
+@if $display_new_topic_badge {
+    .badge-notification.new-topic::before {
+        content: "New!";
+        position: absolute;
+        right: -1.1em;
+        top: -0.85em;
+        background: var(--quaternary);
+        transform: rotate(12deg);
+        font-size: var(--font-down-2);
+        letter-spacing: .05em;
+        padding: .2em .5em;
+        border-radius: 4px;
+        font-weight: normal;
+        color: var(--secondary);
+        height: auto;
+        width: auto;
+    }
+}
