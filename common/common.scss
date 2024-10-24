@@ -90,7 +90,7 @@ div.wrapper {
 
 div.content {
     background-color: transparent;
-    position: absolute;
+    position: sticky;
     top: 80%;
     width: 100%;
     z-index: 100;
@@ -99,5 +99,6 @@ div.content {
 @if $show_tsParticles_links_animation {
     div.sidebar-wrapper {
         background-color: transparent;
+        position: sticky;
     }
 }
