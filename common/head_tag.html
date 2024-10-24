@@ -1,6 +1,81 @@
 
 <script type="text/discourse-plugin" version="1.14.0">
   const showLinks = settings.show_tsParticles_links_animation;
+  const showParallax = settings.show_tsParticles_parallax_animation;
+  if (showParallax) {
+    const script = document.createElement('script');
+    script.addEventListener("load", () => {
+          console.log("called", tsParticles);
+          initTsParticles();
+      })
+    script.src = "const script = document.createElement('script');
+    script.addEventListener("load", () => {
+          console.log("called", tsParticles);
+          initTsParticles();
+      })
+    script.src = "https://cdn.jsdelivr.net/npm/@tsparticles/move-parallax@3.5.0/tsparticles.move.parallax.min.js";
+    document.head.appendChild(script);
+    
+    function initTsParticles() {
+      (async () => {
+        await loadParallaxMover(tsParticles);
+        await tsParticles.load({
+          id: "tsparticles",
+          options: { preset: "parallax" },
+          background: {
+            "color": {"value":"#0d47a1"}
+          }
+        });
+      })();
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      var elements = document.querySelectorAll('section#main');
+      elements.forEach(function(el) {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'wrapper';
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+      });
+      var elements = document.querySelectorAll('div#main-outlet-wrapper');
+      elements.forEach(function(el) {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'content';
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+      });
+    });
+  }";
+    document.head.appendChild(script);
+    
+    function initTsParticles() {
+      (async () => {
+        await tsParticles.load({
+          id: "tsparticles",
+          options: { preset: "links" },
+          background: {
+            "color": {"value":"#0d47a1"}
+          }
+        });
+      })();
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      var elements = document.querySelectorAll('section#main');
+      elements.forEach(function(el) {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'wrapper';
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+      });
+      var elements = document.querySelectorAll('div#main-outlet-wrapper');
+      elements.forEach(function(el) {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'content';
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+      });
+    });
+  }
+  
   if (showLinks) {
     const script = document.createElement('script');
     script.addEventListener("load", () => {
