@@ -49,6 +49,10 @@ span.first.username::after {
     color: var(--primary);
 }
 
+span.second.full-name {
+    display: none;
+}
+
 div.topic-avatar, span.second.full-name {
     opacity: 99;
 }
