@@ -7,7 +7,7 @@
     const script_one = document.createElement('script');
     script_one.addEventListener("load", () => {
           //console.log("called", tsParticles);
-          initTsParticles();
+          initTsParticlesParallax();
     })
     script_one.src = "https://cdn.jsdelivr.net/npm/@tsparticles/move-parallax@3.5.0/tsparticles.move.parallax.min.js";
     document.head.appendChild(script_one);
@@ -19,7 +19,7 @@
     script_two.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js";
     document.head.appendChild(script_two);
     
-    function initTsParticles() {
+    function initTsParticlesParallax() {
       (async () => {
         await loadParallaxMover(tsParticles);
         await tsParticles.load({
@@ -60,12 +60,12 @@
   const script_two = document.createElement('script');
     script_two.addEventListener("load", () => {
           console.log("called", tsParticles);
-          initTsParticles();
+          initTsParticlesLinks();
       })
     script_two.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js";
     document.head.appendChild(script_two);
     
-    function initTsParticles() {
+    function initTsParticlesLinks() {
       (async () => {
         await tsParticles.load({
           id: "tsparticles",
