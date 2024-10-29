@@ -6,7 +6,8 @@ show_tsParticles_links_animation:
 show_tsParticles_parallax_animation:
   default: false
   type: bool
-  description: "Setting to enable/disable tsParticles' links animation."
+  description: "Setting to enable/disable tsParticles' parallax animation."
+  
 display_new_topic_badge:
   default: true
   type: bool
