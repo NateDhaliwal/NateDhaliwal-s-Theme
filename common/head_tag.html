@@ -20,6 +20,7 @@
     
     function initTsParticlesParallax() {
       (async () => {
+        await loadfull(tsParticles);
         await loadParallaxMover(tsParticles);
         await tsParticles.load({
           id: "tsparticles",
