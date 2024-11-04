@@ -4,7 +4,10 @@
   const showAnemone = settings.show_tsParticles_anemone_animation;
   if (showAnemone) {
     const script_one = document.createElement('script');
-    
+    script_one.addEventListener("load", () => {
+          console.log("called", tsParticles);
+          initTsParticlesAnemone();
+    });
     script_one.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-sea-anemone@3.0.2/tsparticles.preset.seaAnemone.bundle.min.js";
 
     document.body.appendChild(script_one);
