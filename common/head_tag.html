@@ -2,6 +2,50 @@
 <script type="text/discourse-plugin" version="1.14.0">
   const showLinks = settings.show_tsParticles_links_animation;
   const showAnemone = settings.show_tsParticles_anemone_animation;
+  const showHyperspace = settings.show_tsParticles_hyperspace_animation;
+  if (showHyperspace) {
+    const script_one = document.createElement('script');
+    script_one.addEventListener("load", () => {
+          console.log("called", tsParticles);
+          initTsParticlesAnemone();
+    });
+    script_one.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-hyperspace@3/tsparticles.preset.hyperspace.bundle.min.js";
+
+    document.body.appendChild(script_one);
+    
+    function initTsParticlesAnemone() {
+      (async () => {
+        await loadHyperspacePreset(tsParticles);
+
+        await tsParticles.load({
+          id: "tsparticles",
+          options: {
+            preset: "hyperspace",
+          },
+        });
+      })();
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      var elements = document.querySelectorAll('section#main');
+      elements.forEach(function(el) {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'wrapper';
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+      });
+      var elements = document.querySelectorAll('div#main-outlet-wrapper');
+      elements.forEach(function(el) {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'content';
+        el.parentNode.insertBefore(wrapper, el);
+        wrapper.appendChild(el);
+      });
+    });
+  }
+  
+  }
+  
+  
   if (showAnemone) {
     const script_one = document.createElement('script');
     script_one.addEventListener("load", () => {
