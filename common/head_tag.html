@@ -1,9 +1,10 @@
 
 <script type="text/discourse-plugin" version="1.14.0">
+  const background_animation = settings.background_animation;
   const showLinks = settings.show_tsParticles_links_animation;
   const showAnemone = settings.show_tsParticles_anemone_animation;
   const showHyperspace = settings.show_tsParticles_hyperspace_animation;
-  if (showHyperspace) {
+  if (background_animation == 'Hyperspace') {
     const script_one = document.createElement('script');
     script_one.addEventListener("load", () => {
           console.log("called", tsParticles);
@@ -46,7 +47,7 @@
   
   
   
-  if (showAnemone) {
+  if (background_animation == 'Anemone') {
     const script_one = document.createElement('script');
     script_one.addEventListener("load", () => {
           console.log("called", tsParticles);
@@ -86,7 +87,7 @@
     });
   }
   
-  if (showLinks) {
+  if (background_animation == 'Links') {
     const script_two = document.createElement('script');
     script_two.addEventListener("load", () => {
           console.log("called", tsParticles);
