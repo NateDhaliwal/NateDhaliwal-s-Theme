@@ -96,7 +96,7 @@ div.content {
     z-index: 100;
 }
 
-@if $show_tsParticles_links_animation or $show_tsParticles_parallax_animation {
+@if $show_tsParticles_links_animation or $show_tsParticles_anemone_animation {
     div.sidebar-wrapper {
         background-color: transparent;
         position: sticky;
