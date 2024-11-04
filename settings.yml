@@ -7,6 +7,11 @@ show_tsParticles_anemone_animation:
   default: false
   type: bool
   description: "Setting to enable/disable tsParticles' anemone animation."
+
+show_tsParticles_hyperspace_animation:
+  default: false
+  type: bool
+  description: "Setting to enable/disable tsParticles' hyperspace animation."
   
 display_new_topic_badge:
   default: true
