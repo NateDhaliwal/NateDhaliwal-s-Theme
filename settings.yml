@@ -3,10 +3,10 @@ show_tsParticles_links_animation:
   type: bool
   description: "Setting to enable/disable tsParticles' links animation."
 
-show_tsParticles_parallax_animation:
+show_tsParticles_anemone_animation:
   default: false
   type: bool
-  description: "Setting to enable/disable tsParticles' parallax animation."
+  description: "Setting to enable/disable tsParticles' anemone animation."
   
 display_new_topic_badge:
   default: true
