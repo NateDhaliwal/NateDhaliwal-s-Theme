@@ -6,22 +6,7 @@ background_animation:
     - Anemone
     - Hyperspace
   description: "Setting to choose the background animation of the site."
-  
-show_tsParticles_links_animation:
-  default: false
-  type: bool
-  description: "Setting to enable/disable tsParticles' links animation."
 
-show_tsParticles_anemone_animation:
-  default: false
-  type: bool
-  description: "Setting to enable/disable tsParticles' anemone animation."
-
-show_tsParticles_hyperspace_animation:
-  default: false
-  type: bool
-  description: "Setting to enable/disable tsParticles' hyperspace animation."
-  
 display_new_topic_badge:
   default: true
   type: bool
