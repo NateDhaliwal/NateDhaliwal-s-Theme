@@ -1,39 +1,24 @@
 
 <script type="text/discourse-plugin" version="1.14.0">
   const showLinks = settings.show_tsParticles_links_animation;
-  const showParallax = settings.show_tsParticles_parallax_animation;
-  if (showParallax) {
+  const showAnemone = settings.show_tsParticles_anemone_animation;
+  if (showAnemone) {
     const script_one = document.createElement('script');
-    /*
-    script_one.src = "https://cdn.jsdelivr.net/npm/tsparticles@3.5.0/tsparticles.bundle.min.js";
-    script_one.addEventListener("load", () => {
-          //console.log("called", tsParticles);
-          initTsParticlesParallax();
-    });
-    document.head.appendChild(script_one);
-    */
-    const script_two = document.createElement('script');
-    script_two.addEventListener("load", () => {
-          //console.log("called", tsParticles);
-          initTsParticlesParallax();
-    });
-    script_two.src = "https://cdn.jsdelivr.net/npm/@tsparticles/move-parallax@3.5.0/tsparticles.move.parallax.min.js";
+    
+    script_one.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-sea-anemone@3.0.2/tsparticles.preset.seaAnemone.bundle.min.js";
 
-    document.head.appendChild(script_two);
-
-    function initTsParticlesParallax() {
-
+    document.body.appendChild(script_one);
+    
+    function initTsParticlesAnemone() {
       (async () => {
-
-        //await loadFull(tsParticles);
-        await loadParallaxMover(tsParticles);
-        await tsParticles.load({
-          id: "tsparticles",
-          options: { preset: "parallax" },
-          background: {
-            "color": {"value":"#0d47a1"}
+        await tsParticles.load(
+          {
+            id: "tsparticles",
+            options: {
+              preset: "seaAnemone"
+            }
           }
-        });
+        );
       })();
     }
     document.addEventListener("DOMContentLoaded", function() {
