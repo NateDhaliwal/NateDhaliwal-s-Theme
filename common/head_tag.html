@@ -7,6 +7,7 @@
   const showAnemone = settings.show_tsParticles_anemone_animation;
   const showHyperspace = settings.show_tsParticles_hyperspace_animation;
   if (background_animation == 'Hyperspace') {
+    /*
     const script_one = document.createElement('script');
     script_one.addEventListener("load", () => {
           console.log("called", tsParticles);
@@ -15,19 +16,19 @@
     script_one.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-hyperspace@3/tsparticles.preset.hyperspace.bundle.min.js";
 
     document.body.appendChild(script_one);
-    
-    function initTsParticlesAnemone() {
-      (async () => {
-        await loadHyperspacePreset(tsParticles);
+    */
+    //function initTsParticlesAnemone() {
+    (async () => {
+      await loadHyperspacePreset(tsParticles);
 
-        await tsParticles.load({
-          id: "tsparticles",
-          options: {
-            preset: "hyperspace",
-          },
-        });
-      })();
-    }
+      await tsParticles.load({
+        id: "tsparticles",
+        options: {
+          preset: "hyperspace",
+        },
+      });
+    })();
+    //}
     document.addEventListener("DOMContentLoaded", function() {
       var elements = document.querySelectorAll('section#main');
       elements.forEach(function(el) {
