@@ -1,14 +1,10 @@
-<!--<script src='https://cdn.jsdelivr.net/npm/@tsparticles/preset-hyperspace@3/tsparticles.preset.hyperspace.bundle.min.js'></script>-->
-<script src='https://cdn.jsdelivr.net/npm/@tsparticles/preset-sea-anemone@3.0.2/tsparticles.preset.seaAnemone.bundle.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.2/tsparticles.preset.links.bundle.min.js'></script>
-
 <script type="text/discourse-plugin" version="1.14.0">
   const background_animation = settings.background_animation;
   const showLinks = settings.show_tsParticles_links_animation;
   const showAnemone = settings.show_tsParticles_anemone_animation;
   const showHyperspace = settings.show_tsParticles_hyperspace_animation;
   if (background_animation == 'Hyperspace') {
-    /*
+    
     const script_one = document.createElement('script');
     script_one.addEventListener("load", () => {
           console.log("called", tsParticles);
@@ -17,8 +13,8 @@
     script_one.src = "https://cdn.jsdelivr.net/npm/@tsparticles/preset-hyperspace@3/tsparticles.preset.hyperspace.bundle.min.js";
 
     document.body.appendChild(script_one);
-    */
-    //function initTsParticlesAnemone() {
+    
+    function initTsParticlesAnemone() {
     (async () => {
       await loadHyperspacePreset(tsParticles);
 
@@ -29,7 +25,7 @@
         },
       });
     })();
-    //}
+    }
     document.addEventListener("DOMContentLoaded", function() {
       var elements = document.querySelectorAll('section#main');
       elements.forEach(function(el) {
