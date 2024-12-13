@@ -6,12 +6,10 @@
         {{avatar this.currentUser imageSize="medium"}}
       </a>
       -->
-      <p>Welcome, 
-        <span>
-          <a href="/u/{{this.currentUser.username}}" class="nd-username">
-            {{this.currentUser.username}}
-          </a>
-        </span>
+      <p class='user-welcome'>Welcome, 
+        <a href="/u/{{this.currentUser.username}}" class="nd-username">
+          {{this.currentUser.username}}
+        </a>
       </p>
       <!--
       <span>
