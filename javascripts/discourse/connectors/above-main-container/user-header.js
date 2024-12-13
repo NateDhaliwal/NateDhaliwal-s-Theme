@@ -1,6 +1,7 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { ajax } from "discourse/lib/ajax";
 import { getURLWithCDN } from "discourse-common/lib/get-url";
+import { defaultHomepage } from "discourse/lib/utilities";
 
 export default {
   setupComponent(attrs, component) {
@@ -37,6 +38,9 @@ export default {
         */
         component.set("userName", api.getCurrentUser().name);
         component.set("user", api.getCurrentUser().username);
+        
+        const { currentRouteName } = this.router;
+        component.set("isHomepage", currentRouteName === `discovery.${defaultHomepage()}`);
       });
     }
   },
