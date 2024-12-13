@@ -1,47 +1,45 @@
-{{#unless site.mobileView}}
-  <div class="fkb-panel">
-    {{#if user}}
-      <div class="fkb-panel-top" style="background-image: url('{{userCardBg}}');">
-        <div class="fkb-panel-contents">
-          <div class="fkb-panel-contents-top">
-            <div class="fkb-avatar">
-              <a href="/u/{{this.currentUser.username}}">
-                {{avatar this.currentUser imageSize="medium"}}
-              </a>
-              <a href="/u/{{this.currentUser.username}}" class="fkb-user-names">
-                <span class="fkb-name">
-                  {{this.currentUser.name}}
-                </span>
-                <span class="fkb-username">
-                  {{this.currentUser.username}}
-                </span>
-              </a>              
-            </div>
-          </div>
-          <div class="fkb-panel-contents-stats">
-            <div class="stats">
-              <UserStat @value={{userLikesReceived}} @icon="heart" @label="user.summary.likes_received" /> 
-              <a href="/u/{{user}}/activity/likes-given">
-                <UserStat @value={{userLikesGiven}} @icon="heart" @label="user.summary.likes_given" />
-              </a>
-              {{#if (theme-setting 'fkb_panel_show_solutions')}}
-                <a href="/u/{{user}}/activity/solved">
-                  <UserStat @value={{userSolvedCount}} @icon="check-square" @label="solved.solution_summary.other" />
-                </a>
-              {{/if}}
-              <a href="/u/{{user}}/activity/topics">
-                <UserStat @value={{userTopicCount}} @label="user.summary.topic_count" />
-              </a>
-              <a href="/u/{{user}}/activity/replies">
-                <UserStat @value={{userPostCount}} @label="user.summary.post_count" />
-              </a>
-            </div>
-          </div>
-        </div>
+{{#if user}}
+  <div class="nd-user-header">
+    <div class="nd-user-header-welcome">
+      <!--
+      <a href="/u/{{this.currentUser.username}}">
+        {{avatar this.currentUser imageSize="medium"}}
+      </a>
+      -->
+      <p>Welcome, </p>
+      <span>
+        <a href="/u/{{this.currentUser.username}}" class="nd-user-names">
+          <!--
+          <span class="nd-name">
+            {{this.currentUser.name}}
+          </span>
+          -->
+          <span class="nd-username">
+            {{this.currentUser.username}}
+          </span>
+        </a>
+      </span>
+    </div>
+    <!--
+    <div class="nd-panel-contents-stats">
+      <div class="stats">
+        <UserStat @value={{userLikesReceived}} @icon="heart" @label="user.summary.likes_received" /> 
+        <a href="/u/{{user}}/activity/likes-given">
+          <UserStat @value={{userLikesGiven}} @icon="heart" @label="user.summary.likes_given" />
+        </a>
+        {{#if (theme-setting 'nd_panel_show_solutions')}}
+          <a href="/u/{{user}}/activity/solved">
+            <UserStat @value={{userSolvedCount}} @icon="check-square" @label="solved.solution_summary.other" />
+          </a>
+        {{/if}}
+        <a href="/u/{{user}}/activity/topics">
+          <UserStat @value={{userTopicCount}} @label="user.summary.topic_count" />
+        </a>
+        <a href="/u/{{user}}/activity/replies">
+          <UserStat @value={{userPostCount}} @label="user.summary.post_count" />
+        </a>
       </div>
-    {{/if}}   
-
-    
+    </div>
+    -->
   </div>
-
-{{/unless}}
+{{/if}}
