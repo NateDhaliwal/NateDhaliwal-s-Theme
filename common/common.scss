@@ -96,6 +96,10 @@ div.content {
     z-index: 100;
 }
 
+div#main-outlet {
+    width: 50%;
+}
+
 @if $background_animation != 'None (default)' {
     div.sidebar-wrapper {
         background-color: transparent;
