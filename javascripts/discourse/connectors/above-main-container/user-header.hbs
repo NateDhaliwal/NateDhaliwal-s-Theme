@@ -1,55 +1,57 @@
-{{#if user}}
-  <div class="nd-user-header">
-    <div class="nd-user-header-welcome">
-      <!--
-      <a href="/u/{{this.currentUser.username}}">
-        {{avatar this.currentUser imageSize="medium"}}
-      </a>
-      -->
-      <p class='user-welcome'>{{theme-setting 'welcome_user_message'}}
-        <a href="/u/{{this.currentUser.username}}" class="nd-username">
-          {{this.currentUser.username}}
+{{#if this.isHomepage}}
+  {{#if this.user}}
+    <div class="nd-user-header">
+      <div class="nd-user-header-welcome">
+        <!--
+        <a href="/u/{{this.currentUser.username}}">
+          {{avatar this.currentUser imageSize="medium"}}
         </a>
-      </p>
-      <!--
-      <span>
-        <a href="/u/{{this.currentUser.username}}" class="nd-user-names">
-          <span class="nd-name">
-            {{this.currentUser.name}}
-          </span>
-          <span class="nd-username">
+        -->
+        <p class='user-welcome'>{{theme-setting 'welcome_user_message'}}
+          <a href="/u/{{this.currentUser.username}}" class="nd-username">
             {{this.currentUser.username}}
-          </span>
-        </a>
-      </span>
+          </a>
+        </p>
+        <!--
+        <span>
+          <a href="/u/{{this.currentUser.username}}" class="nd-user-names">
+            <span class="nd-name">
+              {{this.currentUser.name}}
+            </span>
+            <span class="nd-username">
+              {{this.currentUser.username}}
+            </span>
+          </a>
+        </span>
+        -->
+      </div>
+      <!--
+      <div class="nd-panel-contents-stats">
+        <div class="stats">
+          <UserStat @value={{userLikesReceived}} @icon="heart" @label="user.summary.likes_received" /> 
+          <a href="/u/{{user}}/activity/likes-given">
+            <UserStat @value={{userLikesGiven}} @icon="heart" @label="user.summary.likes_given" />
+          </a>
+          {{#if (theme-setting 'nd_panel_show_solutions')}}
+            <a href="/u/{{user}}/activity/solved">
+              <UserStat @value={{userSolvedCount}} @icon="check-square" @label="solved.solution_summary.other" />
+            </a>
+          {{/if}}
+          <a href="/u/{{user}}/activity/topics">
+            <UserStat @value={{userTopicCount}} @label="user.summary.topic_count" />
+          </a>
+          <a href="/u/{{user}}/activity/replies">
+            <UserStat @value={{userPostCount}} @label="user.summary.post_count" />
+          </a>
+        </div>
+      </div>
       -->
     </div>
-    <!--
-    <div class="nd-panel-contents-stats">
-      <div class="stats">
-        <UserStat @value={{userLikesReceived}} @icon="heart" @label="user.summary.likes_received" /> 
-        <a href="/u/{{user}}/activity/likes-given">
-          <UserStat @value={{userLikesGiven}} @icon="heart" @label="user.summary.likes_given" />
-        </a>
-        {{#if (theme-setting 'nd_panel_show_solutions')}}
-          <a href="/u/{{user}}/activity/solved">
-            <UserStat @value={{userSolvedCount}} @icon="check-square" @label="solved.solution_summary.other" />
-          </a>
-        {{/if}}
-        <a href="/u/{{user}}/activity/topics">
-          <UserStat @value={{userTopicCount}} @label="user.summary.topic_count" />
-        </a>
-        <a href="/u/{{user}}/activity/replies">
-          <UserStat @value={{userPostCount}} @label="user.summary.post_count" />
-        </a>
-      </div>
-    </div>
-    -->
-  </div>
-
-  {{else}}
-    <p class='user-welcome'>
-      {{theme-setting 'signup_message'}}
-      <DButton @class="btn-primary sign-up-button" @action={{route-action "showCreateAccount"}} @label="sign_up" />
-    </p>
+  
+    {{else}}
+      <p class='user-welcome'>
+        {{theme-setting 'signup_message'}}
+        <DButton @class="btn-primary sign-up-button" @action={{route-action "showCreateAccount"}} @label="sign_up" />
+      </p>
+  {{/if}}
 {{/if}}
