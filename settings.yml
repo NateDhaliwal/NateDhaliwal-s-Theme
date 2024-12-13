@@ -12,12 +12,12 @@ display_new_topic_badge:
   type: bool
   description: "Show 'New!' badge next to new topics."
 
-welcome_user_mesage:
+welcome_user_message:
   default: "Welcome back, "
   type: string
   description: "The welcome message of logged in users."
 
-signup_messgae:
+signup_message:
   default: "Join in on the conversation!"
   type: string
   description: "The signup messag eof logged out users."
