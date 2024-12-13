@@ -6,7 +6,7 @@
         {{avatar this.currentUser imageSize="medium"}}
       </a>
       -->
-      <p class='user-welcome'>Welcome back, 
+      <p class='user-welcome'>{{theme-setting 'welcome-user-message'}}
         <a href="/u/{{this.currentUser.username}}" class="nd-username">
           {{this.currentUser.username}}
         </a>
@@ -49,7 +49,7 @@
 
   {{else}}
     <p class='user-welcome'>
-      Join in on the conversation!
+      {{theme-setting 'signup-message'}}
       <DButton @class="btn-primary sign-up-button" @action={{route-action "showCreateAccount"}} @label="sign_up" />
     </p>
 {{/if}}
