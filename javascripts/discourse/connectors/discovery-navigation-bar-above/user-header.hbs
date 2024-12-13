@@ -6,19 +6,25 @@
         {{avatar this.currentUser imageSize="medium"}}
       </a>
       -->
-      <p>Welcome, </p>
+      <p>Welcome, 
+        <span>
+          <a href="/u/{{this.currentUser.username}}" class="nd-username">
+            {{this.currentUser.username}}
+          </a>
+        </span>
+      </p>
+      <!--
       <span>
         <a href="/u/{{this.currentUser.username}}" class="nd-user-names">
-          <!--
           <span class="nd-name">
             {{this.currentUser.name}}
           </span>
-          -->
           <span class="nd-username">
             {{this.currentUser.username}}
           </span>
         </a>
       </span>
+      -->
     </div>
     <!--
     <div class="nd-panel-contents-stats">
