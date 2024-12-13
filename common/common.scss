@@ -100,6 +100,11 @@ div#main-outlet {
     width: 50%;
 }
 
+div.nd-panel {
+    width: 30%;
+    float: right;
+}
+
 @if $background_animation != 'None (default)' {
     div.sidebar-wrapper {
         background-color: transparent;
