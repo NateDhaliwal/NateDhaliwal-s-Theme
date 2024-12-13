@@ -11,7 +11,7 @@ export default {
         if (api.getCurrentUser() === null) return false;
 
         let username = component.get("currentUser.username");
-        
+        /*
         ajax("/u/" + username + "/summary.json").then (function(result) {
           const userLikesReceived = result.user_summary.likes_received;
           const userLikesGiven = result.user_summary.likes_given;        
@@ -34,6 +34,9 @@ export default {
           component.set("userName", api.getCurrentUser().name);
           component.set("user", api.getCurrentUser().username);         
         });
+        */
+        component.set("userName", api.getCurrentUser().name);
+        component.set("user", api.getCurrentUser().username);
       });
     }
   },
