@@ -8,6 +8,10 @@ p, h1, h2, h3, h4, h5, h6, li, dt {
     color: --primary;
 }
 
+p.user-welcome {
+    font-size: 20px;
+}
+
 a {
     color: --tertiary;
 }
@@ -55,6 +59,11 @@ span.second.full-name {
 
 div.topic-avatar, span.second.full-name {
     opacity: 99;
+}
+
+div.nd-header {
+    border: 3px solid var(--primary);
+    border-radius: 5px;
 }
 
 td.posters.topic-list-data {
