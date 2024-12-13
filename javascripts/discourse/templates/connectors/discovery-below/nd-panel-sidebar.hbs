@@ -1,7 +1,7 @@
-{{#unless site.mobileView}}
+{{#unless this.site.mobileView}}
   <div class="nd-panel">
     {{#if user}}
-      <div class="nd-panel-top" style="background-image: url('{{userCardBg}}');">
+      <div class="nd-panel-top" style="background-image: url('{{this.userCardBg}}');">
         <div class="nd-panel-contents">
           <div class="nd-panel-contents-top">
             <div class="nd-avatar">
@@ -20,20 +20,20 @@
           </div>
           <div class="nd-panel-contents-stats">
             <div class="stats">
-              <UserStat @value={{userLikesReceived}} @icon="heart" @label="user.summary.likes_received" /> 
-              <a href="/u/{{user}}/activity/likes-given">
-                <UserStat @value={{userLikesGiven}} @icon="heart" @label="user.summary.likes_given" />
+              <UserStat @value={{this.userLikesReceived}} @icon="heart" @label="this.user.summary.likes_received" /> 
+              <a href="/u/{{this.user}}/activity/likes-given">
+                <UserStat @value={{this.userLikesGiven}} @icon="heart" @label="this.user.summary.likes_given" />
               </a>
               {{#if (theme-setting 'nd_panel_show_solutions')}}
-                <a href="/u/{{user}}/activity/solved">
-                  <UserStat @value={{userSolvedCount}} @icon="check-square" @label="solved.solution_summary.other" />
+                <a href="/u/{{this.user}}/activity/solved">
+                  <UserStat @value={{this.userSolvedCount}} @icon="check-square" @label="solved.solution_summary.other" />
                 </a>
               {{/if}}
-              <a href="/u/{{user}}/activity/topics">
-                <UserStat @value={{userTopicCount}} @label="user.summary.topic_count" />
+              <a href="/u/{{this.user}}/activity/topics">
+                <UserStat @value={{this.userTopicCount}} @label="user.summary.topic_count" />
               </a>
-              <a href="/u/{{user}}/activity/replies">
-                <UserStat @value={{userPostCount}} @label="user.summary.post_count" />
+              <a href="/u/{{this.user}}/activity/replies">
+                <UserStat @value={{this.userPostCount}} @label="user.summary.post_count" />
               </a>
             </div>
             {{#if (theme-setting 'nd_panel_show_badges')}}
@@ -51,9 +51,9 @@
                     </span>
                   </a>
                 {{/each}}
-                <a href="/u/{{user}}/badges">
+                <a href="/u/{{this.user}}/badges">
                   <span class="user-badge">
-                    <span class="count">{{i18n (theme-prefix "sidebar.all_badges")}} ({{allBadges}})</span>
+                    <span class="count">{{i18n (theme-prefix "this.sidebar.all_badges")}} ({{this.allBadges}})</span>
                   </span>
                 </a>
               </div>
