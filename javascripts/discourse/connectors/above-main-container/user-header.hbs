@@ -46,4 +46,10 @@
     </div>
     -->
   </div>
+
+  {{else}}
+    <p class='user-welcome'>
+      Join in on the conversation!
+      <DButton @class="btn-primary sign-up-button" @action={{route-action "showCreateAccount"}} @label="sign_up" />
+    </p>
 {{/if}}
