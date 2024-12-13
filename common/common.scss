@@ -1,10 +1,3 @@
-:root {
-  --d-sidebar-width: 20em;
-  @media screen and (max-width: 1250px) {
-    --d-sidebar-width: 18em;
-  }
-}
-
 body {
     background-color: --secondary;
     font-family: "Kode Mono", monospace;
@@ -105,11 +98,6 @@ div.content {
 
 div#main-outlet {
     width: 50%;
-}
-
-div.nd-panel {
-    width: 50%;
-    float: right;
 }
 
 @if $background_animation != 'None (default)' {
